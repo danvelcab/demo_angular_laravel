@@ -3,12 +3,12 @@
 ## RoadMap
 
 Laravel:
-- Integrar Laravel Abstract Class
+[x] Integrar Laravel Abstract Class
 - Implementar web services del recurso "projects"
 
 
 Angular:
-- Integrar Angular Material Design
+[x] Integrar Angular Material Design
 - Añadir cabecera
 - Añadir footer
 - Añadir menu lateral
@@ -17,3 +17,11 @@ Angular:
 - Añadir vista de detalles de "porjects"
 - Añadir borrado de "projects"
 - Añadir borrado masivo de "projects"
+
+
+## Laravel
+### Migrations
+Obtenidas de laravelSD: https://laravelsd.com/
+
+
+## Angular

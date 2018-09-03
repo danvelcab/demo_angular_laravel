@@ -8,8 +8,16 @@
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "ebarriosbloonde/LaravelAbstractClass": "dev-feature/v2",
+        "daniel-furmanov/laravel-formatter": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com:/ebarriosbloonde/LaravelAbstractClass.git"
+        }
+    ],
     "require-dev": {
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
