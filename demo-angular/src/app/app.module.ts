@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import {routing} from './app.routing';
-
 import { AppComponent } from './app.component';
 import { NavComponent } from '../components/partials/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -11,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponentComponent } from '../pages/admin-component/admin-component.component';
 import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { ProjectsPageComponent } from '../pages/projects-page/projects-page.component';
+import { NgTemplateModule } from './ng-template/ng-template.module';
+import { RouterModule } from '@angular/router';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProjectsPageComponent } from '../pages/projects-page/projects-page.comp
     ProjectsPageComponent
   ],
   imports: [
+    NgTemplateModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -29,9 +31,12 @@ import { ProjectsPageComponent } from '../pages/projects-page/projects-page.comp
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    RouterModule,
     routing
   ],
-  providers: [],
+  providers: [
+    // RouterNavigationHelper
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

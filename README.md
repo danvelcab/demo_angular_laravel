@@ -20,6 +20,17 @@ Angular:
 - Añadir borrado de "projects"
 - Añadir borrado masivo de "projects"
 
+## Especificaciones
+
+Laravel:
+tabulador: 4 espacios
+
+Angular:
+- Variables y funciones: camelCase (Ej: nuevaVariable)
+- constantes y variables globales: UPPERCASE (Ej: NUEVA_CONSTANTES)
+- tabulador: 2 espacios (angular CLI trabaja con 2 espacios)
+- Dejar espacios entre operadores (+, -, =, etc ...)
+
 
 ## Laravel
 ### Migrations
