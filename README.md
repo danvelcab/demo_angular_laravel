@@ -12,6 +12,9 @@ Angular:
 [x] Añadir cabecera
 - Añadir footer
 [x] Añadir menu lateral
+[x] Añadir archivos de plantilla de navegación
+- Añadir archivos de plantilla de mensaje de alertas
+- Añadir archivos de plantilla de conexión con la API
 - Añadir página principal
 - Añadir página de "projects"
 - Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
@@ -19,6 +22,7 @@ Angular:
 - Añadir vista de detalles de "porjects"
 - Añadir borrado de "projects"
 - Añadir borrado masivo de "projects"
+- Añadir autenticación y resolver y guards de usuario autenticado
 
 ## Especificaciones
 
@@ -48,3 +52,11 @@ En index: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" r
 ### Cabecera y SideBar
 Obtenidos a través del comando:
 ng generate @angular/material:material-nav --name <component-name>
+
+
+### NgTemplateModule
+
+#### Navigation
+Es un helper que ayuda a la navegación entre las distintas páginas y rutas.
+Para poder utilizarlo hay que crear una constante como la que hay en el fichero router-navigation.helper.ts con un array
+en el que se indique un nombre o alias de la página y la ruta que corresponda.
