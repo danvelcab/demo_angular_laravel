@@ -9,9 +9,11 @@ Laravel:
 
 Angular:
 [x] Integrar Angular Material Design
-- Añadir cabecera
+[x] Añadir cabecera
 - Añadir footer
-- Añadir menu lateral
+[x] Añadir menu lateral
+- Añadir página principal
+- Añadir página de "projects"
 - Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
 - Añadir modal y formulario (dinámico) de "projects"
 - Añadir vista de detalles de "porjects"
@@ -25,3 +27,13 @@ Obtenidas de laravelSD: https://laravelsd.com/
 
 
 ## Angular
+
+### Theme
+En styles.css: @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+### Icons
+En index: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+### Cabecera y SideBar
+Obtenidos a través del comando:
+ng generate @angular/material:material-nav --name <component-name>
