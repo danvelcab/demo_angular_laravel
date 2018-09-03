@@ -2,46 +2,72 @@
 
 ## RoadMap
 
-Laravel:
+### Laravel:
+
 [x] Integrar Laravel Abstract Class
-- Implementar web services del recurso "projects"
+
+[ ] Implementar web services del recurso "projects"
 
 
-Angular:
+### Angular:
+
 [x] Integrar Angular Material Design
+
 [x] Añadir cabecera
-- Añadir footer
+
+[ ] Añadir footer
+
 [x] Añadir menu lateral
+
 [x] Añadir archivos de plantilla de navegación
-- Añadir archivos de plantilla de mensaje de alertas
-- Añadir archivos de plantilla de conexión con la API
-- Añadir página principal
-- Añadir página de "projects"
-- Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
-- Añadir modal y formulario (dinámico) de "projects"
-- Añadir vista de detalles de "porjects"
-- Añadir borrado de "projects"
-- Añadir borrado masivo de "projects"
-- Añadir autenticación y resolver y guards de usuario autenticado
+
+[ ] Añadir archivos de plantilla de mensaje de alertas
+
+[ ] Añadir archivos de plantilla de conexión con la API
+
+[ ] Añadir página principal
+
+[ ] Añadir página de "projects"
+
+[ ] Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
+
+[ ] Añadir modal y formulario (dinámico) de "projects"
+
+[ ] Añadir vista de detalles de "porjects"
+
+[ ] Añadir borrado de "projects"
+
+[ ] Añadir borrado masivo de "projects"
+
+[ ] Añadir autenticación y resolver y guards de usuario autenticado
+
+
+//////////////////////////////   //////////////////////////////   ////////////////////////////// 
 
 ## Especificaciones
 
-Laravel:
+###Laravel:
 tabulador: 4 espacios
 
-Angular:
+### Angular:
 - Variables y funciones: camelCase (Ej: nuevaVariable)
 - constantes y variables globales: UPPERCASE (Ej: NUEVA_CONSTANTES)
 - tabulador: 2 espacios (angular CLI trabaja con 2 espacios)
 - Dejar espacios entre operadores (+, -, =, etc ...)
 
 
-## Laravel
+//////////////////////////////   //////////////////////////////   //////////////////////////////
+
+
+## Desarrollo Laravel
 ### Migrations
 Obtenidas de laravelSD: https://laravelsd.com/
 
+### Implementacion WebService (LaravelAbstractClass)
+Mirar documentación del paquete: 
+https://github.com/ebarriosbloonde/LaravelAbstractClass/tree/feature/v2
 
-## Angular
+## Desarrollo Angular
 
 ### Theme
 En styles.css: @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
