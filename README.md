@@ -80,9 +80,41 @@ Obtenidos a través del comando:
 ng generate @angular/material:material-nav --name <component-name>
 
 
+### Selectores
+paquete: https://github.com/ng-select/ng-select
+
+### Filtros
+
+
 ### NgTemplateModule
 
 #### Navigation
 Es un helper que ayuda a la navegación entre las distintas páginas y rutas.
 Para poder utilizarlo hay que crear una constante como la que hay en el fichero router-navigation.helper.ts con un array
 en el que se indique un nombre o alias de la página y la ruta que corresponda.
+
+#### TranslateModule
+Para las traducciones.
+paquete: https://github.com/ngx-translate/core
+
+
+#### ResponsesHelper
+Procesamiento de respuestas de las llamadas a las API
+
+#### MessageService
+Donde deben configurarse los mensajes de alertas mostrados
+
+#### Tables
+- Filtros
+- Búsqueda
+- Ordenación
+- Paginación
+- Mostrar/ocultar columnas
+- Seleccionar filas
+- Acciones por fila
+- Acciones masivas
+
+
+#### Paginción
+paquete: https://www.npmjs.com/package/ngx-pagination
+

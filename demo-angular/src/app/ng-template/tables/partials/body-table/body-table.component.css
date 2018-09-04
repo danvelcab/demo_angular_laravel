@@ -1,0 +1,5 @@
+.table__table {
+  display: block; 
+  min-height: 300px; 
+  overflow-x: auto!important;
+}

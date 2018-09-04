@@ -1,0 +1,33 @@
+<thead class="th__table__thead">
+    <tr class="th__table__tr">
+        <ng-container *ngFor="let header of headers | headerPanel">
+
+            <th *ngIf="header.value.isShow && header.value.label === 'check'" class="th__table__check th__table__th m-datatable__cell--center m-datatable__cell m-datatable__cell--check check">
+                <span>
+                    <label class="m-checkbox m-checkbox--single m-checkbox--all m-checkbox--solid m-checkbox--brand m__0">
+                        <input type="checkbox"
+                            #allSelectorCheckbox
+                            (click)="checkOrDischeckAllSelected()">
+                        <span></span>
+                    </label>
+                </span>
+            </th>
+
+
+            <th *ngIf="header.value.isShow && header.value.label !== 'check' && header.value.label !== 'action'" class="th__table__th {{ header.value.class }}" (click)="onOrder(header.value.label)">
+                <span class="th__table__span">{{ header.value.value | translate }}
+                    <i class="material-icons" *ngIf="header.value.order != null">
+                      <ng-container *ngIf="header.value.order == '+-'">unfold_more</ng-container>
+                      <ng-container *ngIf="header.value.order == '+'">expand_more</ng-container>
+                      <ng-container *ngIf="header.value.order == '-'">expand_less</ng-container>
+                    </i>
+                </span>
+
+            </th>
+
+            <th *ngIf="header.value.isShow && header.value.label === 'action'"  class="th__table__th actions">
+                <span class="th__table__span">{{ header.value.value | translate }}</span>
+            </th>
+        </ng-container>
+    </tr>
+</thead>

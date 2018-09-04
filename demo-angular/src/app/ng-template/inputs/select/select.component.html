@@ -1,0 +1,43 @@
+<div id="{{options['name']}}" class="form-group m-form__group row conatiner__app__select">
+    <label class="col-4 col-form-label" *ngIf="!options['no_label']">
+        <ng-container *ngIf="prefix">
+            {{ prefix + '-' + options.name | translate}}
+        </ng-container>
+        <ng-container *ngIf="!prefix">
+            {{ options.name | translate}}
+        </ng-container>
+        <ng-container *ngIf="options['help']">
+            <a href="javascript:;" title="{{options['help']}}">(?)</a>
+        </ng-container>
+        <ng-container *ngIf="errors && errors.required != null"><span class="m--font-danger"> *</span></ng-container>
+    </label>
+    <div [ngClass]="{'col-12': options['no_label'], 'col-8': !options['no_label']}">
+        <div class="m-form__control">
+            <ng-select [multiple]="multiple"
+                       [addTag]="addTag"
+                       [disabled]="disabled"
+                       placeholder="{{options['placeholder'] | translate}}"
+                       bindValue="value"
+                       bindLabel="value"
+                       [loading]="loading"
+                       [items]="options['options']"
+                       [(ngModel)]="model"></ng-select>
+        </div>
+        <ng-container *ngIf="errors">
+            <p *ngIf="errors.required" class="form-control-feedback text-danger" padding-left>
+                {{'error-required' | translate}}
+            </p>
+            <p *ngIf="errors.empty" class="form-control-feedback text-danger" padding-left>
+                {{'error-empty' | translate}}
+            </p>
+        </ng-container>
+        <ng-container *ngIf="serverErrors">
+            <p *ngIf="serverErrors['metadata.' + options.name + '.value']" class="form-control-feedback text-danger" padding-left>
+                {{serverErrors['metadata.' + options.name + '.value'][0]}}
+            </p>
+            <p *ngIf="serverErrors[options.name]" class="form-control-feedback text-danger" padding-left>
+                {{serverErrors[options.name][0]}}
+            </p>
+        </ng-container>
+    </div>
+</div>

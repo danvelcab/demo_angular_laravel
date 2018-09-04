@@ -1,0 +1,16 @@
+<div class="m-form__group m-form__group--inline" id="{{options.name}}">
+  <div class="m-form__label">
+    <label class="sr-only">
+      {{ options.name | translate}}
+    </label>
+  </div>
+  <div class="m-form__control">
+    <ng-select [multiple]="multiple"
+               [disabled]="disabled"
+               [placeholder]="options.placeholder | translate"
+               bindValue="value"
+               [loading]="loading"
+               [items]="options.options"
+               [(ngModel)]="model"></ng-select>
+  </div>
+</div>
