@@ -16,11 +16,8 @@
 
             <th *ngIf="header.value.isShow && header.value.label !== 'check' && header.value.label !== 'action'" class="th__table__th {{ header.value.class }}" (click)="onOrder(header.value.label)">
                 <span class="th__table__span">{{ header.value.value | translate }}
-                    <i class="material-icons" *ngIf="header.value.order != null">
-                      <ng-container *ngIf="header.value.order == '+-'">unfold_more</ng-container>
-                      <ng-container *ngIf="header.value.order == '+'">expand_more</ng-container>
-                      <ng-container *ngIf="header.value.order == '-'">expand_less</ng-container>
-                    </i>
+                    <i class="fas"
+                       [ngClass]="{'fa-sort': header.value.order == '+-', '': header.value.order == null, 'fa-sort-up': header.value.order == '+', 'fa-sort-down': header.value.order == '-'}"></i>
                 </span>
 
             </th>

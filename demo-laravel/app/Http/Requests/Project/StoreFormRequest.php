@@ -1,8 +1,9 @@
 <?php
 
-namespace Danvelcab\LvlAPIGeneratorFramework\Classes;
+namespace App\Http\Requests\Project;
 
 use App\Autoload;
+use Danvelcab\ProjectGenerator\AbstractClasses\AbstractStoreFormRequest;
 use Danvelcab\ProjectGenerator\Helpers\CodesHelper;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -16,7 +17,7 @@ class StoreFormRequest extends AbstractStoreFormRequest
 
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct("project");
     }
 
     /**
@@ -38,7 +39,7 @@ class StoreFormRequest extends AbstractStoreFormRequest
     {
         $rules = parent::rules();
         $extra_rules = [];
-        array_merge($rules, $extra_rules);
+        $rules = array_merge($rules, $extra_rules);
         return $rules;
     }
     public function messages(){

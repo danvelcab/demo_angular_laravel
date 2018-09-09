@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ProjectFormModalComponent } from '../../components/modals/project-form-modal/project-form-modal.component';
+import { ActionConfirmationModalComponent } from '../../components/modals/action-confirmation-modal/action-confirmation-modal.component';
+import { ProjectTableComponent } from '../../components/tables/project-table/project-table.component';
 
 @Component({
   selector: 'app-projects-page',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsPageComponent implements OnInit {
 
+  @ViewChild(ProjectFormModalComponent) projectFormModalComponent;
+  @ViewChild(ProjectTableComponent) projectTableComponent;
+  @ViewChild(ActionConfirmationModalComponent) actionConfirmationModalComponent;
+
+  public aux_id_to_delete: any;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateTable(): void {
+    let component = this;
+    setTimeout(function(){
+      component.projectTableComponent.list();
+    })
+  }
+
+  create(): void {
+    this.projectFormModalComponent.show('create', null);
+  }
+  edit(id: any): void {
+    this.projectFormModalComponent.show('edit', id);
+  }
+  delete(id: any): void {
+    this.aux_id_to_delete = id;
+    this.actionConfirmationModalComponent.openModal();
+  }
+  confirmDelete(): void {
+
   }
 
 }

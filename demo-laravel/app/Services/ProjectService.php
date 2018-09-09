@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Autoload;
 use App\Configurations\ProjectConfigurationImpl;
 use App\Helpers\ProjectHelper;
+use App\Project;
 use App\Repositories\ProjectRepository;
 use Danvelcab\ProjectGenerator\AbstractClasses\AbstractService;
 
@@ -22,7 +23,6 @@ class ProjectService extends AbstractService
 
     public function __construct()
     {
-        
         $this->configuration_impl = new ProjectConfigurationImpl();
         $this->model = $this->configuration_impl->getModelName();
         $this->repository = ProjectRepository::getInstance(); //Remove  params if exist a specific repository for this resource

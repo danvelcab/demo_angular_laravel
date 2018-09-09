@@ -38,7 +38,7 @@ export class ProjectService {
         let params = {
             title: project.title,
             description: project.description,
-            status_id: project.status_id,
+            status: project.status,
             visible: project.visible,
             estimated_start_date: project.estimated_start_date,
             estimated_end_date: project.estimated_end_date,

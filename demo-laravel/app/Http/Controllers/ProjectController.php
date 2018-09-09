@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Project\StoreFormRequest;
 use App\Services\ProjectService;
-use Danvelcab\LvlAPIGeneratorFramework\Classes\StoreFormRequest;
 use Danvelcab\ProjectGenerator\AbstractClasses\AbstractController;
 use Danvelcab\ProjectGenerator\Helpers\CodesHelper;
 

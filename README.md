@@ -11,25 +11,25 @@
 
 ### Angular:
 
-[x] Integrar Angular Material Design
+[ ] Integrar Angular Material Design
 
-[x] Añadir cabecera
+[ ] Añadir cabecera
 
 [ ] Añadir footer
 
-[x] Añadir menu lateral
+[ ] Añadir menu lateral
 
 [x] Añadir archivos de plantilla de navegación
 
 [ ] Añadir archivos de plantilla de mensaje de alertas
 
-[ ] Añadir archivos de plantilla de conexión con la API
+[X] Añadir archivos de plantilla de conexión con la API
 
-[ ] Añadir página principal
+[X] Añadir página principal
 
-[ ] Añadir página de "projects"
+[X] Añadir página de "projects"
 
-[ ] Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
+[X] Añadir tabla (+ filtros, búsqueda, paginación y ordenación)
 
 [ ] Añadir modal y formulario (dinámico) de "projects"
 
@@ -87,6 +87,9 @@ paquete: https://github.com/ng-select/ng-select
 
 
 ### NgTemplateModule
+
+#### Iconos
+Fontawesome: https://fontawesome.com/
 
 #### Navigation
 Es un helper que ayuda a la navegación entre las distintas páginas y rutas.

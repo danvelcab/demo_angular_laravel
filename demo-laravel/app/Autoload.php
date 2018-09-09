@@ -12,7 +12,7 @@ namespace App;
 class Autoload
 {
     const CLASSES = [
-        'project' => 'App\Configurations\ProjectImpl',
+        'project' => 'App\Configurations\ProjectConfigurationImpl',
 //        'type' => 'App\LvlNgImplementations\TypeImpl',
 //        'cloth' => 'App\LvlNgImplementations\ClothImpl'
     ];

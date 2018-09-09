@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label *ngIf="structure['config']['hasLabel']" for="{{structure['label']}}">{{structure['label'] | translate}}</label>
+  <input type="text" class="form-control" id="{{structure['label']}}" placeholder="{{structure['placeholder'] | translate}}" [(ngModel)]="model">
+  <small *ngIf="structure['config']['hasHelp']" id="{{structure['label']}}Help" class="form-text text-muted">{{structure['help'] | translate}}</small>
+  <small class="text-danger" *ngIf="error && error['required']">
+    {{'required-error' | translate}}
+  </small>
+  <small class="text-danger" *ngIf="serverError">
+    {{serverError | translate}}
+  </small>
+</div>

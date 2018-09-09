@@ -8,5 +8,9 @@
       hasActionColumn: false,
       hasCheckboxColumn: true
     }"
-  ></app-project-table>
+    (create)="create()"
+    (edit)="edit($event)"
+    (delete)="delete($event)"></app-project-table>
 </p>
+<app-project-form-modal (success)="updateTable()"></app-project-form-modal>
+<app-action-confirmation-modal (confirmEmitter)="confirmDelete()" [message]="'are you sure?'" [modal_id]="'project_confirm_action_modal'"></app-action-confirmation-modal>

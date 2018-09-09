@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from '../components/partials/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
-  MatInputModule, MatFormFieldModule
+  MatInputModule, MatFormFieldModule, MatDialogModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponentComponent } from '../pages/admin-component/admin-component.component';
@@ -22,16 +21,22 @@ import { StatusFilterComponent } from '../components/filters/status-filter/statu
 import { TranslateModule } from '@ngx-translate/core';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+import { ProjectFormModalComponent } from '../components/modals/project-form-modal/project-form-modal.component';
+import { ProjectFormComponent } from '../components/forms/project-form/project-form.component';
+import { ActionConfirmationModalComponent } from '../components/modals/action-confirmation-modal/action-confirmation-modal.component';
+import { InputTextComponent } from './ng-template/inputs/input-text/input-text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     AdminComponentComponent,
     HomePageComponent,
     ProjectsPageComponent,
     ProjectTableComponent,
-    StatusFilterComponent
+    StatusFilterComponent,
+    ProjectFormModalComponent,
+    ProjectFormComponent,
+    ActionConfirmationModalComponent,
   ],
   imports: [
     NgTemplateModule,
@@ -45,6 +50,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatInputModule,
+    MatDialogModule,
     RouterModule,
     routing,
     HttpClientModule,

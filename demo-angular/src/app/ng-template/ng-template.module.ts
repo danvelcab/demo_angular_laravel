@@ -20,6 +20,9 @@ import {
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { ValidationService } from './forms/services/validation.service';
+import { InputFormDirective } from './forms/directives/input-form.directive';
+import { InputTextComponent } from './inputs/input-text/input-text.component';
 
 
 @NgModule({
@@ -32,18 +35,12 @@ import { BrowserModule } from '@angular/platform-browser';
     NgxPaginationModule,
     FormsModule,
     NgSelectModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatInputModule,
   ],
   providers: [
     NavigationHelper,
     MessageService,
-    ResponseHelper
+    ResponseHelper,
+    ValidationService
   ],
   declarations: [
     BodyTableComponent,
@@ -51,23 +48,23 @@ import { BrowserModule } from '@angular/platform-browser';
     TdTableComponent,
     HeaderTableComponent,
     FiltersDirective,
-    HeaderPanelPipe
+    InputFormDirective,
+    HeaderPanelPipe,
+    InputTextComponent
   ],
   exports: [
     BrowserModule,
     BrowserAnimationsModule,
     BodyTableComponent,
     HeaderTableComponent,
+    InputTextComponent,
     TranslateModule,
     NgSelectModule,
     FormsModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatInputModule,
+    InputFormDirective
+  ],
+  entryComponents: [
+    InputTextComponent
   ]
 })
 export class NgTemplateModule {}

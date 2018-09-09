@@ -54,9 +54,9 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
     },
     btns: [
       {
-        label: 'createGrid',
+        label: 'create',
         show: true,
-        value: 'Create Grid',
+        value: 'Create Project',
         icon: 'flaticon flaticon-plus'
       }
     ]
@@ -156,5 +156,11 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
   enterSearch($event) {
     this.filter.search = $event.event.target.value;
     this.listWithTimeout()
+  }
+  clickHeaderBtn(e) {
+    const target = this.getTr(e.event.target, 'a');
+    if (target.id === 'header__btn__create') {
+      this.onCreate();
+    }
   }
 }

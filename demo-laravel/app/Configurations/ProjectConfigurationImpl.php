@@ -14,7 +14,7 @@ class ProjectConfigurationImpl implements IFrameworkConfiguration
         /**
          * return 'User';
          */
-        return 'Project';
+        return 'App\Project';
     }
 
     /**
@@ -50,8 +50,9 @@ class ProjectConfigurationImpl implements IFrameworkConfiguration
          */
         return [
             'title' => 'required',
+            'description' => 'required',
             'status' => 'required|in:0,1,2',
-            'visible' => 'required|boolean',
+//            'visible' => 'required|boolean',
             'estimated_start_date' => 'required|date',
             'estimated_end_date'    => 'required|date'
         ];
@@ -90,7 +91,7 @@ class ProjectConfigurationImpl implements IFrameworkConfiguration
         /**
          * return ['name', 'filter']
          */
-        return ['name'];
+        return ['title'];
     }
 
     /**
@@ -100,7 +101,7 @@ class ProjectConfigurationImpl implements IFrameworkConfiguration
         /**
          * return ['id', 'name', 'filter']
          */
-        return ['id', 'name', 'status', 'visible'];
+        return ['id', 'title', 'status', 'visible'];
     }
 
     /**

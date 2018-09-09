@@ -3,10 +3,10 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 export abstract class AbstractInputComponent implements OnInit, OnChanges {
 
     @Input()
-    public options: any[];
+    public structure: any[];
 
     @Input()
-    public errors: any;
+    public error: any;
 
     @Input()
     public serverErrors: any;
@@ -36,24 +36,13 @@ export abstract class AbstractInputComponent implements OnInit, OnChanges {
     }
     ngOnChanges(changes: SimpleChanges) {
         if (changes.options && changes.options.currentValue) {
-            this.options = changes.options.currentValue;
-            if (this.options['default'] && this.modelSelect === null) {
-                this.setToDefault();
-            }
+            this.structure = changes.options.currentValue;
         }
     }
 
     set model(model) {
         this.modelSelect = model;
         this.modelChange.emit(this.modelSelect);
-    }
-
-    private setToDefault(): void {
-        var component = this;
-        setTimeout(function() {
-            component.modelSelect = component.options['default'];
-            component.modelChange.emit(component.modelSelect);
-        }, 10);
     }
 
 }
