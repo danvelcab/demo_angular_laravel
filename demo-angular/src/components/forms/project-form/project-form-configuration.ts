@@ -12,11 +12,15 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
+      label_clasess: [
         "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
+        hasInput: true,
         hasHelp: false,
       }
     },
@@ -29,11 +33,15 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
-        "col-6"
+      label_clasess: [
+        "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
+        hasInput: true,
         hasHelp: false,
       }
     },
@@ -46,11 +54,15 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
-        "col-6"
+      label_clasess: [
+        "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
+        hasInput: true,
         hasHelp: false,
       }
     },
@@ -63,8 +75,11 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
-        "col-6"
+      label_clasess: [
+        "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
@@ -80,8 +95,11 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
-        "col-6"
+      label_clasess: [
+        "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
@@ -97,8 +115,11 @@ export class ProjectFormConfiguration {
       rules: [
         "required"
       ],
-      style: [
-        "col-6"
+      label_clasess: [
+        "col-3"
+      ],
+      input_classes: [
+
       ],
       config: {
         hasLabel: true,
