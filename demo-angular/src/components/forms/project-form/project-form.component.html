@@ -1,6 +1,7 @@
 <ng-container *ngIf="structure && project">
   <ng-container *ngFor="let field of structure">
     <div class="form-group">
+      <ng-template appLabelForm></ng-template>
       <ng-template appInputForm></ng-template>
     </div>
   </ng-container>

@@ -1,6 +1,8 @@
 import { InputFormDirective } from './directives/input-form.directive';
 import { ComponentFactoryResolver, EventEmitter, Output, QueryList } from '@angular/core';
 import { InputTextComponent } from '../inputs/input-text/input-text.component';
+import { LabelFormDirective } from './directives/label-form.directive';
+import { LabelComponent } from '../inputs/label/label.component';
 export abstract class AbstractFormComponent{
 
   public structure: any;
@@ -13,6 +15,7 @@ export abstract class AbstractFormComponent{
   public serverErrorEventEmitterArray: EventEmitter<any>[];
 
   public abstract getInputFormDirectives(): QueryList<InputFormDirective>;
+  public abstract getLabelFormDirectives(): QueryList<LabelFormDirective>;
   public abstract pushInputFormComponents(componentRef: any): void;
   public abstract getModel(): any;
   public abstract getComponentFactoryResolver(): any;
@@ -24,6 +27,16 @@ export abstract class AbstractFormComponent{
   public constructForm(): void{
     if (this.getInputFormDirectives()) {
       for (let e = 0; e < this.getInputFormDirectives().length; e++) {
+        if(this.structure[e]['config']['hasLabel']) {
+          // Creación del label
+          let labelFormDirectives = this.getLabelFormDirectives()['_results'][e];
+          let componentFactory = this.getComponentFactoryResolver().resolveComponentFactory(LabelComponent);
+          let viewContainerRef = labelFormDirectives.viewContainerRef;
+          viewContainerRef.clear();
+          let componentRef = viewContainerRef.createComponent(componentFactory);
+          componentRef.instance['structure'] = this.structure[e];
+        }
+        // Creación del input
         let inputFormDirectives = this.getInputFormDirectives()['_results'][e];
         let componentFactory = this.getComponentFactoryResolver().resolveComponentFactory(this.getComponentByFieldType(this.structure[e]['type']));
         let viewContainerRef = inputFormDirectives.viewContainerRef;

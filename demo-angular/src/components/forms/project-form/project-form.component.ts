@@ -14,6 +14,7 @@ import { ProjectService } from '../../../services/project.service';
 import { CodesHelper } from '../../../app/ng-template/responses/codes.helper';
 import { ResponseHelper } from '../../../app/ng-template/responses/response.helper';
 import { MessageService } from '../../../app/ng-template/responses/message.service';
+import { LabelFormDirective } from '../../../app/ng-template/forms/directives/label-form.directive';
 
 @Component({
   selector: 'app-project-form',
@@ -25,6 +26,7 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
   public project: Project;
 
   @ViewChildren(InputFormDirective) inputFormDirectives: QueryList<InputFormDirective>;
+  @ViewChildren(LabelFormDirective) labelFormDirective: QueryList<LabelFormDirective>;
   inputFormComponents: any[];
 
   constructor(private validationService: ValidationService,
@@ -85,6 +87,10 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
   public getInputFormDirectives(): QueryList<InputFormDirective> {
     return this.inputFormDirectives;
   }
+  public getLabelFormDirectives(): QueryList<LabelFormDirective> {
+    return this.labelFormDirective;
+  }
+
   public getModel(): any {
     return this.project;
   }

@@ -23,6 +23,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ValidationService } from './forms/services/validation.service';
 import { InputFormDirective } from './forms/directives/input-form.directive';
 import { InputTextComponent } from './inputs/input-text/input-text.component';
+import { LabelComponent } from './inputs/label/label.component';
+import { LabelFormDirective } from './forms/directives/label-form.directive';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { InputTextComponent } from './inputs/input-text/input-text.component';
     HeaderTableComponent,
     FiltersDirective,
     InputFormDirective,
+    LabelFormDirective,
     HeaderPanelPipe,
+    LabelComponent,
     InputTextComponent
   ],
   exports: [
@@ -57,13 +61,16 @@ import { InputTextComponent } from './inputs/input-text/input-text.component';
     BrowserAnimationsModule,
     BodyTableComponent,
     HeaderTableComponent,
+    LabelComponent,
     InputTextComponent,
     TranslateModule,
     NgSelectModule,
     FormsModule,
-    InputFormDirective
+    InputFormDirective,
+    LabelFormDirective
   ],
   entryComponents: [
+    LabelComponent,
     InputTextComponent
   ]
 })
