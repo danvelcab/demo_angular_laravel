@@ -3,6 +3,8 @@ import { ComponentFactoryResolver, EventEmitter, Output, QueryList } from '@angu
 import { InputTextComponent } from '../inputs/input-text/input-text.component';
 import { LabelFormDirective } from './directives/label-form.directive';
 import { LabelComponent } from '../inputs/label/label.component';
+import {PasswordComponent} from '../inputs/password/password.component';
+import {RadioButtonComponent} from '../inputs/radio-button/radio-button.component';
 export abstract class AbstractFormComponent{
 
   public structure: any;
@@ -101,8 +103,12 @@ export abstract class AbstractFormComponent{
     return serverErrorEventEmitterArray;
   }
   private getComponentByFieldType(type: string): any {
-    if(type === 'input-text') {
+    if (type === 'input-text') {
       return InputTextComponent;
+    } else if (type === 'input-password') {
+      return PasswordComponent;
+    } else if (type === 'radio-button') {
+      return RadioButtonComponent;
     }
   }
   private changeModelAttr(attr, value) {

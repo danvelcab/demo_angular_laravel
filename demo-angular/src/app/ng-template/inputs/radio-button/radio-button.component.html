@@ -1,0 +1,11 @@
+<ng-container *ngFor="let value of structure['values']">
+  <br>
+  <input type="radio" name="{{structure['name']}}" value="{{value['value']}}" [(ngModel)]="model"> {{value['text']}}
+</ng-container>
+<small *ngIf="structure['config']['hasHelp']" id="{{structure['label']}}Help" class="form-text text-muted">{{structure['help'] | translate}}</small>
+<small class="text-danger" *ngIf="error && error['required']">
+  {{'required-error' | translate}}
+</small>
+<small class="text-danger" *ngIf="serverError">
+  {{serverError | translate}}
+</small>

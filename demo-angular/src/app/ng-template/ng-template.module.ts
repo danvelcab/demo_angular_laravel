@@ -25,6 +25,8 @@ import { InputFormDirective } from './forms/directives/input-form.directive';
 import { InputTextComponent } from './inputs/input-text/input-text.component';
 import { LabelComponent } from './inputs/label/label.component';
 import { LabelFormDirective } from './forms/directives/label-form.directive';
+import {PasswordComponent} from './inputs/password/password.component';
+import {RadioButtonComponent} from './inputs/radio-button/radio-button.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { LabelFormDirective } from './forms/directives/label-form.directive';
     LabelFormDirective,
     HeaderPanelPipe,
     LabelComponent,
-    InputTextComponent
+    InputTextComponent,
+    PasswordComponent,
+    RadioButtonComponent
   ],
   exports: [
     BrowserModule,
@@ -63,6 +67,8 @@ import { LabelFormDirective } from './forms/directives/label-form.directive';
     HeaderTableComponent,
     LabelComponent,
     InputTextComponent,
+    PasswordComponent,
+    RadioButtonComponent,
     TranslateModule,
     NgSelectModule,
     FormsModule,
@@ -71,7 +77,9 @@ import { LabelFormDirective } from './forms/directives/label-form.directive';
   ],
   entryComponents: [
     LabelComponent,
-    InputTextComponent
+    InputTextComponent,
+    PasswordComponent,
+    RadioButtonComponent
   ]
 })
 export class NgTemplateModule {}
