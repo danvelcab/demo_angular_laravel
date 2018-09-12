@@ -6,7 +6,7 @@ export abstract class AbstractTableComponent {
 
     @Output() create: EventEmitter<any> = new EventEmitter(); // Create event
     @Output() edit: EventEmitter<any> = new EventEmitter(); // Edit event emitted when press edit button of a row
-    @Output() trash: EventEmitter<any> = new EventEmitter(); // Trash event emitted when press trash button of a row
+    @Output() delete: EventEmitter<any> = new EventEmitter(); // Trash event emitted when press trash button of a row
 
     public selected: number[] = []; // Array with the (element) ids selected in the first column with checkboxes
     public allSelected = false; // Flag to indicate if all row are selected or not
@@ -168,7 +168,7 @@ export abstract class AbstractTableComponent {
     onTrash(id): void {
         for (const i in this.getElements()) {
             if (this.getElements()[i].id === id) {
-                this.trash.emit(this.getElements()[i]);
+                this.delete.emit(this.getElements()[i].id);
                 break;
             }
         }

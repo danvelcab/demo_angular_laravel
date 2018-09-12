@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProjectFormModalComponent } from '../../components/modals/project-form-modal/project-form-modal.component';
 import { ActionConfirmationModalComponent } from '../../components/modals/action-confirmation-modal/action-confirmation-modal.component';
 import { ProjectTableComponent } from '../../components/tables/project-table/project-table.component';
+import {ProjectService} from '../../services/project.service';
+import {ResponseHelper} from '../../app/ng-template/responses/response.helper';
 
 @Component({
   selector: 'app-projects-page',
@@ -16,7 +18,10 @@ export class ProjectsPageComponent implements OnInit {
 
   public aux_id_to_delete: any;
 
-  constructor() { }
+  constructor(
+    private projectService: ProjectService,
+    private responseHelper: ResponseHelper,
+  ) { }
 
   ngOnInit() {
   }
@@ -39,7 +44,15 @@ export class ProjectsPageComponent implements OnInit {
     this.actionConfirmationModalComponent.openModal();
   }
   confirmDelete(): void {
-
+    this.projectService.delete(this.aux_id_to_delete).subscribe(
+      res => {
+        this.updateTable();
+        this.actionConfirmationModalComponent.closeModal();
+      },
+      error => {
+        this.responseHelper.handleError(error);
+      }
+    );
   }
 
 }

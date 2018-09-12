@@ -163,4 +163,10 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
       this.onCreate();
     }
   }
+  constructBodyColumnsExceptions(key, value, isShow, isOrder, item): any {
+    let objectData = null;
+    let translate = false;
+    objectData = this.setData(key, isShow, isOrder, value, translate);
+    return objectData;
+  }
 }

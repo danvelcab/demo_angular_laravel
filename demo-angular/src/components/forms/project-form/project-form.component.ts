@@ -44,19 +44,23 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
 
   public new(): void {
     this.project = new Project();
-    this.errors = this.validationService.buildErrorsArray(this.structure);
-    this.serverErrors = this.validationService.buildServerErrorsArray(this.structure);
-    this.modelEventEmitterArray = this.buildModelEmitters(this.project);
-    this.setModel(this.project, this.structure);
-    this.errorEventEmitterArray = this.buildErrorEmitters(this.errors);
-    this.serverErrorEventEmitterArray = this.buildErrorEmitters(this.serverErrors);
-    let component = this;
-    setTimeout(function(){
-        component.constructForm();
-    }, 200);
+    this.buildErrorModelAndEmiters();
   }
   public edit(id): void {
-
+    this.projectService.get(id).subscribe(
+      res => {
+        this.project = res;
+        this.buildErrorModelAndEmiters();
+      },
+      error => {
+        if (error.status == CodesHelper.FAILED_VALIDATOR_CODE) {
+          this.serverErrors = error.error;
+          this.emitServerError();
+        } else {
+          this.responseHelper.handleError(error);
+        }
+      }
+    );
   }
   public store(): void {
     let validate = this.validationService.checkForm(this.errors, this.project);
@@ -81,7 +85,26 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     }
   }
   public update(): void {
-
+    let validate = this.validationService.checkForm(this.errors, this.project);
+    this.emitError();
+    if (validate) {
+      this.projectService.update(this.project).subscribe(
+        res => {
+          this.resetErrors();
+          this.new();
+          this.success();
+          this.messageService.showSuccessMessage();
+        },
+        error => {
+          if (error.status == CodesHelper.FAILED_VALIDATOR_CODE) {
+            this.serverErrors = error.error;
+            this.emitServerError();
+          } else {
+            this.responseHelper.handleError(error);
+          }
+        }
+      );
+    }
   }
   /** Añadir en todos los componentes formuarios a partir de aquí **/
   public getInputFormDirectives(): QueryList<InputFormDirective> {
@@ -104,5 +127,17 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
   private resetErrors(): void {
     this.errors = this.validationService.buildErrorsArray(this.structure);
     this.serverErrors = {};
+  }
+  private buildErrorModelAndEmiters() {
+    this.errors = this.validationService.buildErrorsArray(this.structure);
+    this.serverErrors = this.validationService.buildServerErrorsArray(this.structure);
+    this.modelEventEmitterArray = this.buildModelEmitters(this.project);
+    this.setModel(this.project, this.structure);
+    this.errorEventEmitterArray = this.buildErrorEmitters(this.errors);
+    this.serverErrorEventEmitterArray = this.buildErrorEmitters(this.serverErrors);
+    let component = this;
+    setTimeout(function(){
+      component.constructForm();
+    }, 200);
   }
 }

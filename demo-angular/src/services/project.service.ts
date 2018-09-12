@@ -11,7 +11,7 @@ export class ProjectService {
 
     constructor(public _http: HttpClient) {
     }
-    get(project_id: string): Observable<Object> {
+    get(project_id: string): Observable<any> {
         return this._http.get(ApiRoutesHelper.getProjectDetailsURL(project_id));
     }
     list(listRequestDate: ListRequestData): Observable<Object> {
