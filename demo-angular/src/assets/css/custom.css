@@ -1,0 +1,47 @@
+/* ---------------------------------------------------
+    Colors
+----------------------------------------------------- */
+
+/* SIDERBAR */
+.container__sidebar {
+  background-color: #000 !important;
+}
+
+.sidebar__title {
+  background-color: #000 !important;
+}
+
+.sidebar__list {
+  background-color: #0E0E0E !important;
+}
+
+.sidebar__element {
+  background-color: #272727 !important;
+}
+
+.sidebar__element:hover {
+  background-color: #171717 !important;
+}
+
+.element__children {
+  background-color: #373737 !important;
+}
+
+.element__children:hover {
+  background-color: #fff !important;
+  color: #373737 !important;
+}
+
+a.download {
+  background: #fff !important;
+  color: #0E0E0E !important;
+}
+
+a.article {
+  background: #0E0E0E !important;
+  color: #fff !important;
+}
+
+/* HEADER */
+
+

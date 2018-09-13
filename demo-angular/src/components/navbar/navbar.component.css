@@ -1,0 +1,19 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+.navbar__flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__logo {
+  width: 12rem;
+}
+
+.background {
+  background-color: #b0c68e;
+}

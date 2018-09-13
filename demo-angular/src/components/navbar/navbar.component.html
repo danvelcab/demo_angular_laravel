@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm navbar-light {{ configNavbar['style']['background'] }}">
+  
+  <a *ngIf="configNavbar['title']['isShow']" class="navbar-brand" [href]="configNavbar['title']['href']">{{ configNavbar.title.text }}</a>
+  <img *ngIf="configNavbar['logo']['isShow']" class="header__logo" [src]="configNavbar.logo.src" [alt]="configNavbar.logo.alt">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDemoAngular" aria-controls="navbarDemoAngular" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarDemoAngular">
+    <ul class="navbar-nav mr-auto {{ configNavbar['style']['flex'] }}">
+      <li *ngFor="let item of configNavbar['item']" class="nav-item active">
+        <a class="nav-link" href="#">{{ item.label }}<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+    <form *ngIf="configNavbar['search']['isShow']" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+
+</nav>

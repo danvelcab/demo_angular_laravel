@@ -25,6 +25,8 @@ import { ProjectFormModalComponent } from '../components/modals/project-form-mod
 import { ProjectFormComponent } from '../components/forms/project-form/project-form.component';
 import { ActionConfirmationModalComponent } from '../components/modals/action-confirmation-modal/action-confirmation-modal.component';
 import { InputTextComponent } from './ng-template/inputs/input-text/input-text.component';
+import { NavbarComponent } from '../components/navbar/navbar.component';
+import { SidebarComponent } from '../components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { InputTextComponent } from './ng-template/inputs/input-text/input-text.c
     ProjectFormModalComponent,
     ProjectFormComponent,
     ActionConfirmationModalComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     NgTemplateModule,

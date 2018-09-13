@@ -1,0 +1,11 @@
+.container__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #b0c68e;
+}
+
+.header__logo {
+  width: 12rem;
+}
