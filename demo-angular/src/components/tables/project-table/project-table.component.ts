@@ -3,15 +3,15 @@ import { Project } from '../../../models/project';
 import { ProjectTableFilter } from './project-table-filter';
 import { ProjectTableOrder } from './project-table-order';
 import { ProjectTableVisibility } from './project-table-visibility';
-import { DataHeader } from '../../../app/ng-template/tables/models/data-header';
 import { ProjectService } from '../../../services/project.service';
-import { ResponseHelper } from '../../../app/ng-template/responses/response.helper';
-import { TableOptions } from '../../../app/ng-template/tables/models/table-options';
-import { AbstractTableComponent } from '../../../app/ng-template/tables/partials/abstract-table/abstract-table.component';
-import { Pagination } from '../../../app/ng-template/tables/models/pagination';
-import { ListRequestData } from '../../../app/ng-template/api/tools/list-request-data';
-import { BodyTableComponent } from '../../../app/ng-template/tables/partials/body-table/body-table.component';
 import { StatusFilterComponent } from '../../filters/status-filter/status-filter.component';
+import { ResponseHelper } from '../../../../projects/ng-template/src/responses/response.helper';
+import { AbstractTableComponent } from '../../../../projects/ng-template/src/tables/partials/abstract-table/abstract-table.component';
+import { BodyTableComponent } from '../../../../projects/ng-template/src/tables/partials/body-table/body-table.component';
+import { TableOptions } from '../../../../projects/ng-template/src/tables/models/table-options';
+import { Pagination } from '../../../../projects/ng-template/src/tables/models/pagination';
+import { DataHeader } from '../../../../projects/ng-template/src/tables/models/data-header';
+import { ListRequestData } from '../../../../projects/ng-template/src/api/tools/list-request-data';
 
 @Component({
   selector: 'app-project-table',

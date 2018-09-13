@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponentComponent } from '../pages/admin-component/admin-component.component';
 import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { ProjectsPageComponent } from '../pages/projects-page/projects-page.component';
-import { NgTemplateModule } from './ng-template/ng-template.module';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 import { ProjectTableComponent } from '../components/tables/project-table/project-table.component';
@@ -24,9 +23,9 @@ import { FormsModule } from '@angular/forms';
 import { ProjectFormModalComponent } from '../components/modals/project-form-modal/project-form-modal.component';
 import { ProjectFormComponent } from '../components/forms/project-form/project-form.component';
 import { ActionConfirmationModalComponent } from '../components/modals/action-confirmation-modal/action-confirmation-modal.component';
-import { InputTextComponent } from './ng-template/inputs/input-text/input-text.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
+import { NgTemplateModule } from '../../projects/ng-template/src/lib/ng-template.module';
 
 @NgModule({
   declarations: [

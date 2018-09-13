@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Project;
 
 use App\Autoload;
-use Danvelcab\ProjectGenerator\AbstractClasses\AbstractStoreFormRequest;
+
 use Danvelcab\ProjectGenerator\Helpers\CodesHelper;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;

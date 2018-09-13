@@ -1,9 +1,27 @@
 <ng-container *ngIf="structure && project">
-  <ng-container *ngFor="let field of structure">
-    <div class="form-group">
-      <ng-template appLabelForm></ng-template>
-      <ng-template appInputForm></ng-template>
-    </div>
-  </ng-container>
+  <div class="col-6">
+    <ng-container *ngFor="let field of structure">
+      <div class="form-group" *ngIf="field['tag'] === 1">
+        <ng-template appLabelForm></ng-template>
+        <ng-template appInputForm></ng-template>
+      </div>
+    </ng-container>
+  </div>
+  <div class="col-6">
+    <ng-container *ngFor="let field of structure">
+      <div class="form-group" *ngIf="field['tag'] === 2">
+        <ng-template appLabelForm></ng-template>
+        <ng-template appInputForm></ng-template>
+      </div>
+    </ng-container>
+  </div>
+  <div class="col-12">
+    <ng-container *ngFor="let field of structure">
+      <div class="form-group" *ngIf="field['tag'] === 3">
+        <ng-template appLabelForm></ng-template>
+        <ng-template appInputForm></ng-template>
+      </div>
+    </ng-container>
+  </div>
 </ng-container>
 

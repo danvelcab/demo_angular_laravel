@@ -4,17 +4,14 @@ import {
 } from '@angular/core';
 import { ProjectFormConfiguration } from './project-form-configuration';
 import { Project } from '../../../models/project';
-import { ValidationService } from '../../../app/ng-template/forms/services/validation.service';
-import { InputFormDirective } from '../../../app/ng-template/forms/directives/input-form.directive';
-import { formatCurrency } from '@angular/common';
-import { InputTextComponent } from '../../../app/ng-template/inputs/input-text/input-text.component';
-import { AbstractFormComponent } from '../../../app/ng-template/forms/abstract-form.component';
-import { validate } from 'codelyzer/walkerFactory/walkerFn';
 import { ProjectService } from '../../../services/project.service';
-import { CodesHelper } from '../../../app/ng-template/responses/codes.helper';
-import { ResponseHelper } from '../../../app/ng-template/responses/response.helper';
-import { MessageService } from '../../../app/ng-template/responses/message.service';
-import { LabelFormDirective } from '../../../app/ng-template/forms/directives/label-form.directive';
+import { ValidationService } from '../../../../projects/ng-template/src/forms/services/validation.service';
+import { ResponseHelper } from '../../../../projects/ng-template/src/responses/response.helper';
+import { MessageService } from '../../../../projects/ng-template/src/responses/message.service';
+import { AbstractFormComponent } from '../../../../projects/ng-template/src/forms/abstract-form.component';
+import { InputFormDirective } from '../../../../projects/ng-template/src/forms/directives/input-form.directive';
+import { LabelFormDirective } from '../../../../projects/ng-template/src/forms/directives/label-form.directive';
+import { CodesHelper } from '../../../../projects/ng-template/src/responses/codes.helper';
 
 @Component({
   selector: 'app-project-form',

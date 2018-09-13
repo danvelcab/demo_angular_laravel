@@ -1,6 +1,4 @@
-
-import { HttpHeaders } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../src/environments/environment';
 export class ApiConfigHelper {
   public static ANGULAR_HOST = environment.angularHost ? environment.angularHost : 'http://localhost:4200';
   public static HOST = environment.laravelHost ? environment.laravelHost : 'http://localhost/demo_angular_laravel/demo-laravel/public/';

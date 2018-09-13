@@ -3,7 +3,7 @@ import { ProjectFormModalComponent } from '../../components/modals/project-form-
 import { ActionConfirmationModalComponent } from '../../components/modals/action-confirmation-modal/action-confirmation-modal.component';
 import { ProjectTableComponent } from '../../components/tables/project-table/project-table.component';
 import {ProjectService} from '../../services/project.service';
-import {ResponseHelper} from '../../app/ng-template/responses/response.helper';
+import { ResponseHelper } from '../../../projects/ng-template/src/responses/response.helper';
 
 @Component({
   selector: 'app-projects-page',

@@ -8,7 +8,7 @@ export class ProjectFormConfiguration {
       label: "title",
       placeholder: "write a title",
       type: "input-text",
-      default_value: "default title",
+      default_value: null,
       rules: [
         "required"
       ],

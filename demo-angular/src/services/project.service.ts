@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Project } from '../models/project';
 import { ApiRoutesHelper } from '../helpers/api-routes.helper';
-import { ListRequestData } from '../app/ng-template/api/tools/list-request-data';
 import { Observable } from 'rxjs/index';
-import { QueryParamsHelper } from '../app/ng-template/api/tools/query-params.helper';
+import { ListRequestData } from '../../projects/ng-template/src/api/tools/list-request-data';
+import { QueryParamsHelper } from '../../projects/ng-template/src/api/tools/query-params.helper';
 
 @Injectable()
 export class ProjectService {

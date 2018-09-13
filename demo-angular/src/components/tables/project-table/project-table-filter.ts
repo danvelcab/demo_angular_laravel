@@ -1,5 +1,5 @@
 import { EventEmitter, Output } from '@angular/core';
-import { AbstractFilterComponent } from '../../../app/ng-template/tables/filters/abstract-filter.component';
+import { AbstractFilterComponent } from '../../../../projects/ng-template/src/tables/filters/abstract-filter.component';
 export class ProjectTableFilter extends AbstractFilterComponent {
   search: string;
   status: any;
@@ -19,6 +19,7 @@ export class ProjectTableFilter extends AbstractFilterComponent {
   }
   public emit() {
     this.statusIdModelChange.emit(this.status);
+    //Hacer un emit de todos los Emitter
   }
   public copy(filter: {search: string, status: any, visible: boolean}){
     this.search = filter.search;
