@@ -23,6 +23,12 @@
       ],
       "ng-template/*": [
         "dist/ng-template/*"
+      ],
+      "bloonde-ngx-template": [
+        "dist/bloonde-ngx-template"
+      ],
+      "bloonde-ngx-template/*": [
+        "dist/bloonde-ngx-template/*"
       ]
     }
   }

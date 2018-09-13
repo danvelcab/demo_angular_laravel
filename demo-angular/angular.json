@@ -168,6 +168,46 @@
           }
         }
       }
+    },
+    "bloonde-ngx-template": {
+      "root": "projects/bloonde-ngx-template",
+      "sourceRoot": "projects/bloonde-ngx-template/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/bloonde-ngx-template/tsconfig.lib.json",
+            "project": "projects/bloonde-ngx-template/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/bloonde-ngx-template/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bloonde-ngx-template/src/test.ts",
+            "tsConfig": "projects/bloonde-ngx-template/tsconfig.spec.json",
+            "karmaConfig": "projects/bloonde-ngx-template/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/bloonde-ngx-template/tsconfig.lib.json",
+              "projects/bloonde-ngx-template/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "demo-angular"
