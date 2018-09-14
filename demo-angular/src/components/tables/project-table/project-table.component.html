@@ -1,25 +1,22 @@
 <div>
-  <div>
-    <div>
-      <app-header-table
-        (create)="onCreate()"
-        [data]="dataHeader"
-        (HandlerEnterSearch)="enterSearch($event)"
-        (HandlerClickBtn)="clickHeaderBtn($event)"
-        (HandlerChangeFilter)="changeFilter($event)"></app-header-table>
-      <app-body-table
-        *ngIf="datas"
-        [datas]="datas"
-        [headers]="headers"
-        [paginations]="tableOptions.withPagination"
-        (Edit)="onEdit($event)"
-        (Trash)="onTrash($event)"
-        (handlerlistPaginate)="listPaginate($event)"
-        (HandlerOrder)="toOrder($event)"
-        (HandlerClickTd)="clickTd($event)"
-        (HandlerDoubleClickTd)="doubleClickTd($event)"
-        (HandlerCheckOrDischeckAllSelected)="checkOrDischeckAllSelected()"
-        (HandlerAddOrRemove)="addOrRemove($event)"></app-body-table>
-    </div>
-  </div>
+  <app-header-table
+    (create)="onCreate()"
+    [data]="dataHeader"
+    (HandlerEnterSearch)="enterSearch($event)"
+    (HandlerClickBtn)="clickHeaderBtn($event)"
+    (HandlerChangeFilter)="changeFilter($event)"></app-header-table>
+ 
+  <app-body-table
+    *ngIf="datas"
+    [datas]="datas"
+    [headers]="headers"
+    [paginations]="tableOptions.withPagination"
+    (Edit)="onEdit($event)"
+    (Trash)="onTrash($event)"
+    (handlerlistPaginate)="listPaginate($event)"
+    (HandlerOrder)="toOrder($event)"
+    (HandlerClickTd)="clickTd($event)"
+    (HandlerDoubleClickTd)="doubleClickTd($event)"
+    (HandlerCheckOrDischeckAllSelected)="checkOrDischeckAllSelected()"
+    (HandlerAddOrRemove)="addOrRemove($event)"></app-body-table>
 </div>

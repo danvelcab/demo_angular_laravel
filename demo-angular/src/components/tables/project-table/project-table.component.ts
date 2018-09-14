@@ -5,13 +5,13 @@ import { ProjectTableOrder } from './project-table-order';
 import { ProjectTableVisibility } from './project-table-visibility';
 import { ProjectService } from '../../../services/project.service';
 import { StatusFilterComponent } from '../../filters/status-filter/status-filter.component';
-import { ResponseHelper } from '../../../../projects/ng-template/src/responses/response.helper';
-import { AbstractTableComponent } from '../../../../projects/ng-template/src/tables/partials/abstract-table/abstract-table.component';
-import { BodyTableComponent } from '../../../../projects/ng-template/src/tables/partials/body-table/body-table.component';
-import { TableOptions } from '../../../../projects/ng-template/src/tables/models/table-options';
-import { Pagination } from '../../../../projects/ng-template/src/tables/models/pagination';
-import { DataHeader } from '../../../../projects/ng-template/src/tables/models/data-header';
-import { ListRequestData } from '../../../../projects/ng-template/src/api/tools/list-request-data';
+import { ResponseHelper } from '../../../../projects/bloonde-ngx-template/src/responses/response.helper';
+import { AbstractTableComponent }from '../../../../projects/bloonde-ngx-template/src/tables/partials/abstract-table/abstract-table.component';
+import { BodyTableComponent } from '../../../../projects/bloonde-ngx-template/src/tables/partials/body-table/body-table.component';
+import { TableOptions } from '../../../../projects/bloonde-ngx-template/src/tables/models/table-options';
+import { Pagination } from '../../../../projects/bloonde-ngx-template/src/tables/models/pagination';
+import { DataHeader } from '../../../../projects/bloonde-ngx-template/src/tables/models/data-header';
+import { ListRequestData } from '../../../../projects/bloonde-ngx-template/src/api/tools/list-request-data';
 
 @Component({
   selector: 'app-project-table',
@@ -27,9 +27,14 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
   public projects: Project[];
   public pagination: Pagination;
 
-  public filter: ProjectTableFilter = new ProjectTableFilter(); // Variable con modelo que se asociará a los filtros de la tabla
-  public order: ProjectTableOrder = new ProjectTableOrder(); // Variable con modelo que se asociará a la ordenación de las columnas de la tabla
-  public visibility: ProjectTableVisibility = new ProjectTableVisibility(); // Variable con modelo que se asociará con la visibilidad de las columnas de las tablas
+  // Variable con modelo que se asociará a los filtros de la tabla
+  public filter: ProjectTableFilter = new ProjectTableFilter();
+
+  // Variable con modelo que se asociará a la ordenación de las columnas de la tabla
+  public order: ProjectTableOrder = new ProjectTableOrder();
+
+  // Variable con modelo que se asociará con la visibilidad de las columnas de las tablas
+  public visibility: ProjectTableVisibility = new ProjectTableVisibility();
 
   /**
    * Header config: Here you can set the title of the table, the filters and the buttons

@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Project } from '../models/project';
 import { ApiRoutesHelper } from '../helpers/api-routes.helper';
 import { Observable } from 'rxjs/index';
-import { ListRequestData } from '../../projects/ng-template/src/api/tools/list-request-data';
-import { QueryParamsHelper } from '../../projects/ng-template/src/api/tools/query-params.helper';
+import { ListRequestData } from '../../projects/bloonde-ngx-template/src/api/tools/list-request-data';
+import { QueryParamsHelper } from '../../projects/bloonde-ngx-template/src/api/tools/query-params.helper';
 
 @Injectable()
 export class ProjectService {
@@ -24,18 +24,18 @@ export class ProjectService {
         return this._http.get(ApiRoutesHelper.getProjectListURL(), {params: query_params});
     }
     store(project: Project): Observable<Object> {
-        let params = this.buildParams(project);
+        const params = this.buildParams(project);
         return this._http.post(ApiRoutesHelper.getProjectStoreURL(), params);
     }
     update(project: Project): Observable<Object> {
-        let params = this.buildParams(project);
+        const params = this.buildParams(project);
         return this._http.post(ApiRoutesHelper.getProjectUpdateURL(project.id), params);
     }
     delete(project_id: any): Observable<Object> {
         return this._http.delete(ApiRoutesHelper.getProjectDeleteURL(project_id));
     }
     private buildParams(project: Project): any {
-        let params = {
+        const params = {
             title: project.title,
             description: project.description,
             status: project.status,

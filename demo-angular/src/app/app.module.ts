@@ -25,7 +25,7 @@ import { ProjectFormComponent } from '../components/forms/project-form/project-f
 import { ActionConfirmationModalComponent } from '../components/modals/action-confirmation-modal/action-confirmation-modal.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
-import { NgTemplateModule } from '../../projects/ng-template/src/lib/ng-template.module';
+import { NgTemplateModule } from '../../projects/bloonde-ngx-template/src/lib/ng-template.module';
 
 @NgModule({
   declarations: [

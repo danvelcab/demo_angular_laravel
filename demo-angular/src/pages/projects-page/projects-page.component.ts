@@ -3,7 +3,7 @@ import { ProjectFormModalComponent } from '../../components/modals/project-form-
 import { ActionConfirmationModalComponent } from '../../components/modals/action-confirmation-modal/action-confirmation-modal.component';
 import { ProjectTableComponent } from '../../components/tables/project-table/project-table.component';
 import {ProjectService} from '../../services/project.service';
-import { ResponseHelper } from '../../../projects/ng-template/src/responses/response.helper';
+import { ResponseHelper } from '../../../projects/bloonde-ngx-template/src/responses/response.helper';
 
 @Component({
   selector: 'app-projects-page',
@@ -27,10 +27,10 @@ export class ProjectsPageComponent implements OnInit {
   }
 
   updateTable(): void {
-    let component = this;
-    setTimeout(function(){
+    const component = this;
+    setTimeout(function() {
       component.projectTableComponent.list();
-    })
+    });
   }
 
   create(): void {

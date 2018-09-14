@@ -5,13 +5,13 @@ import {
 import { ProjectFormConfiguration } from './project-form-configuration';
 import { Project } from '../../../models/project';
 import { ProjectService } from '../../../services/project.service';
-import { ValidationService } from '../../../../projects/ng-template/src/forms/services/validation.service';
-import { ResponseHelper } from '../../../../projects/ng-template/src/responses/response.helper';
-import { MessageService } from '../../../../projects/ng-template/src/responses/message.service';
-import { AbstractFormComponent } from '../../../../projects/ng-template/src/forms/abstract-form.component';
-import { InputFormDirective } from '../../../../projects/ng-template/src/forms/directives/input-form.directive';
-import { LabelFormDirective } from '../../../../projects/ng-template/src/forms/directives/label-form.directive';
-import { CodesHelper } from '../../../../projects/ng-template/src/responses/codes.helper';
+import { ValidationService } from '../../../../projects/bloonde-ngx-template/src/forms/services/validation.service';
+import { ResponseHelper } from '../../../../projects/bloonde-ngx-template/src/responses/response.helper';
+import { MessageService } from '../../../../projects/bloonde-ngx-template/src/responses/message.service';
+import { AbstractFormComponent } from '../../../../projects/bloonde-ngx-template/src/forms/abstract-form.component';
+import { InputFormDirective } from '../../../../projects/bloonde-ngx-template/src/forms/directives/input-form.directive';
+import { LabelFormDirective } from '../../../../projects/bloonde-ngx-template/src/forms/directives/label-form.directive';
+import { CodesHelper } from '../../../../projects/bloonde-ngx-template/src/responses/codes.helper';
 
 @Component({
   selector: 'app-project-form',
@@ -60,7 +60,7 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     );
   }
   public store(): void {
-    let validate = this.validationService.checkForm(this.errors, this.project);
+    const validate = this.validationService.checkForm(this.errors, this.project);
     this.emitError();
     if (validate) {
       this.projectService.store(this.project).subscribe(
@@ -82,7 +82,7 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     }
   }
   public update(): void {
-    let validate = this.validationService.checkForm(this.errors, this.project);
+    const validate = this.validationService.checkForm(this.errors, this.project);
     this.emitError();
     if (validate) {
       this.projectService.update(this.project).subscribe(
@@ -132,8 +132,8 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     this.setModel(this.project, this.structure);
     this.errorEventEmitterArray = this.buildErrorEmitters(this.errors);
     this.serverErrorEventEmitterArray = this.buildErrorEmitters(this.serverErrors);
-    let component = this;
-    setTimeout(function(){
+    const component = this;
+    setTimeout(function() {
       component.constructForm();
     }, 200);
   }

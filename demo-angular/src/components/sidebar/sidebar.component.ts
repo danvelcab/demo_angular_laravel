@@ -123,11 +123,11 @@ export class SidebarComponent implements OnInit {
     ],
     itemBtn: [
       {
-        label: 'Botont 1',
+        label: 'Boton 1',
         href: '#',
         class: 'download'
       }, {
-        label: 'Botont 2',
+        label: 'Boton 2',
         href: '#',
         class: 'article'
       }

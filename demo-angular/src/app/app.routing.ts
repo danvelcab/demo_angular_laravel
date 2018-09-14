@@ -4,7 +4,7 @@ import { AdminComponentComponent } from '../pages/admin-component/admin-componen
 import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { ProjectsPageComponent } from '../pages/projects-page/projects-page.component';
 import { ROUTES_ARRAY } from '../helpers/router-navigation.helper';
-import { NavigationHelper } from '../../projects/ng-template/src/navigation/navigation.helper';
+import { NavigationHelper } from '../../projects/bloonde-ngx-template/src/navigation/navigation.helper';
 /**
  * Created by Daniel on 27/02/2018.
  */

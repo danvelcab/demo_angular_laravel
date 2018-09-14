@@ -1,5 +1,5 @@
 
-import { ApiConfigHelper } from '../../projects/ng-template/src/api/api-config.helper';
+import { ApiConfigHelper } from '../../projects/bloonde-ngx-template/src/api/api-config.helper';
 export class ApiRoutesHelper {
 
   public static getProjectDetailsURL(project_id: any): string {
