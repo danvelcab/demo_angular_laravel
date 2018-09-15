@@ -2,6 +2,7 @@ import { EventEmitter, Output } from '@angular/core';
 import { AbstractFilterComponent } from '../../../../projects/bloonde-ngx-template/src/tables/filters/abstract-filter.component';
 export class ProjectTableFilter extends AbstractFilterComponent {
   @Output() statusIdModelChange: EventEmitter<any>;
+  @Output() searchModelChange: EventEmitter<any>;
   search: string;
   status: any;
   visible: boolean;
@@ -11,6 +12,7 @@ export class ProjectTableFilter extends AbstractFilterComponent {
     this.search = null;
     this.status = null;
     this.statusIdModelChange = new EventEmitter();
+    this.searchModelChange = new EventEmitter();
     this.visible = null;
   }
 
@@ -20,6 +22,7 @@ export class ProjectTableFilter extends AbstractFilterComponent {
 
   public emit() {
     this.statusIdModelChange.emit(this.status);
+    this.searchModelChange.emit(this.search);
     // Hacer un emit de todos los Emitter
   }
 

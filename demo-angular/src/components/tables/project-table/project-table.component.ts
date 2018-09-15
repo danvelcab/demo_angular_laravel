@@ -12,6 +12,7 @@ import { TableOptions } from '../../../../projects/bloonde-ngx-template/src/tabl
 import { Pagination } from '../../../../projects/bloonde-ngx-template/src/tables/models/pagination';
 import { DataHeader } from '../../../../projects/bloonde-ngx-template/src/tables/models/data-header';
 import { ListRequestData } from '../../../../projects/bloonde-ngx-template/src/api/tools/list-request-data';
+import { SearchComponent } from '../../../../projects/bloonde-ngx-template/src/tables/components/search/search.component';
 
 @Component({
   selector: 'app-project-table',
@@ -48,15 +49,19 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
           {attr: 'modelChange', value: 'status', type: 'output'},
           {attr: 'model', value: this.filter.statusIdModelChange, type: 'input'}
         ]
+      },
+      {
+        component: SearchComponent,
+        inputs_and_outputs: [
+          {attr: 'label', value: 'search', type: 'property'},
+          {attr: 'placeholder', value: 'Search...', type: 'property'},
+          {attr: 'idText', value: 'generalSearch', type: 'property'},
+          {attr: 'icon', value: 'la la-search', type: 'property'},
+          {attr: 'modelChange', value: 'search', type: 'output'},
+          {attr: 'model', value: this.filter.searchModelChange, type: 'input'}
+        ]
       }
     ],
-    search: {
-      label: 'search',
-      show: true,
-      placeholder: 'Search…',
-      idText: 'generalSearch',
-      icon: 'la la-search'
-    },
     btns: [
       {
         label: 'create',

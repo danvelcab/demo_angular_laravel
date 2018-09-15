@@ -26,6 +26,7 @@ import { ActionConfirmationModalComponent } from '../components/modals/action-co
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { NgTemplateModule } from '../../projects/bloonde-ngx-template/src/lib/ng-template.module';
+import { SearchComponent } from '../../projects/bloonde-ngx-template/src/tables/components/search/search.component';
 
 @NgModule({
   declarations: [
