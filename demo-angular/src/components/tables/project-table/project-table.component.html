@@ -5,14 +5,14 @@
     (HandlerEnterSearch)="enterSearch($event)"
     (HandlerClickBtn)="clickHeaderBtn($event)"
     (HandlerChangeFilter)="changeFilter($event)"></app-header-table>
- 
+
   <app-body-table
     *ngIf="datas"
     [datas]="datas"
     [headers]="headers"
     [paginations]="tableOptions.withPagination"
     (Edit)="onEdit($event)"
-    (Trash)="onTrash($event)"
+    (Delete)="onDelete($event)"
     (handlerlistPaginate)="listPaginate($event)"
     (HandlerOrder)="toOrder($event)"
     (HandlerClickTd)="clickTd($event)"
