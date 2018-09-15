@@ -26,7 +26,6 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
   @Input() tableOptions: TableOptions;
 
   public projects: Project[];
-  public pagination: Pagination;
 
   // Variable con modelo que se asociará a los filtros de la tabla
   public filter: ProjectTableFilter = new ProjectTableFilter();
@@ -95,7 +94,8 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
   list(): void {
     this.cleanSelected();
     this.saveFiltersAndOrders();
-    let listRequestData = new ListRequestData(this.pagination? this.pagination.currentPage : null, this.filter, this.order);
+    let listRequestData = new ListRequestData(this.pagination? this.pagination.currentPage : null, this.filter,
+      this.order, this.pagination ? this.pagination.itemPerPage : null);
     this.projectService.list(listRequestData).subscribe(
       res => {
         this.projects = <Project[]> res['elements'];
