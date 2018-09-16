@@ -78,6 +78,15 @@ class ProjectRepository extends AbstractRepository
     protected function getSelectorSelect(){
         return $this->configuration_impl->getSelectorSelect();
     }
+    protected function getTransformSearchFilters()
+    {
+        return $this->configuration_impl->getTransformSearchFilters();
+    }
+
+    protected function getTransformSearchOrders()
+    {
+        return $this->configuration_impl->getTransformSearchOrders();
+    }
 
     public static function getInstance(){
         if(self::$__instance === null){

@@ -10,12 +10,17 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "ebarriosbloonde/LaravelAbstractClass": "dev-feature/v2",
+        "ebarriosbloonde/usersandprivileges": "dev-feature/v2",
         "daniel-furmanov/laravel-formatter": "dev-master"
     },
     "repositories": [
         {
             "type": "vcs",
             "url":  "https://github.com:/ebarriosbloonde/LaravelAbstractClass.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com:/ebarriosbloonde/usersandprivileges.git"
         }
     ],
     "require-dev": {

@@ -170,4 +170,14 @@ class ProjectConfigurationImpl implements IFrameworkConfiguration
          */
         return [];
     }
+    public function getTransformSearchFilters() {
+        return [
+            'id' => 'projects.id'
+        ];
+    }
+    public function getTransformSearchOrders() {
+        return [
+            'title' => 'projects.title'
+        ];
+    }
 }
