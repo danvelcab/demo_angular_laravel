@@ -17,3 +17,4 @@ Angular:
 - Añadir vista de detalles de "porjects"
 - Añadir borrado de "projects"
 - Añadir borrado masivo de "projects"
+-
