@@ -40,35 +40,52 @@ export class ProjectTableComponent extends AbstractTableComponent implements OnI
    * Header config: Here you can set the title of the table, the filters and the buttons
    */
   public dataHeader: DataHeader = {
-    title: 'Projects',
-    filters: [
-      {
-        component: StatusFilterComponent,
-        inputs_and_outputs: [
-          {attr: 'modelChange', value: 'status', type: 'output'},
-          {attr: 'model', value: this.filter.statusIdModelChange, type: 'input'}
-        ]
-      },
-      {
-        component: SearchComponent,
-        inputs_and_outputs: [
-          {attr: 'label', value: 'search', type: 'property'},
-          {attr: 'placeholder', value: 'Search...', type: 'property'},
-          {attr: 'idText', value: 'generalSearch', type: 'property'},
-          {attr: 'icon', value: 'la la-search', type: 'property'},
-          {attr: 'modelChange', value: 'search', type: 'output'},
-          {attr: 'model', value: this.filter.searchModelChange, type: 'input'}
-        ]
-      }
-    ],
-    btns: [
-      {
-        label: 'create',
-        show: true,
-        value: 'Create Project',
-        icon: 'flaticon flaticon-plus'
-      }
-    ]
+    title: {
+      isShow: false,
+      label: 'Projects!!'
+    },
+    filters: {
+      isShow: true,
+      items: [
+        {
+          component: StatusFilterComponent,
+          inputs_and_outputs: [
+            {attr: 'modelChange', value: 'status', type: 'output'},
+            {attr: 'model', value: this.filter.statusIdModelChange, type: 'input'}
+          ]
+        },
+        {
+          component: SearchComponent,
+          inputs_and_outputs: [
+            {attr: 'label', value: 'search', type: 'property'},
+            {attr: 'placeholder', value: 'Search...', type: 'property'},
+            {attr: 'idText', value: 'generalSearch', type: 'property'},
+            {attr: 'icon', value: 'la la-search', type: 'property'},
+            {attr: 'modelChange', value: 'search', type: 'output'},
+            {attr: 'model', value: this.filter.searchModelChange, type: 'input'}
+          ]
+        }
+      ]
+    },
+    btns: {
+      isShow: true,
+      items: [
+        {
+          isShow: true,
+          label: 'create',
+          value: 'Create Project',
+          icon: 'fas fa-plus',
+          style: 'btn-basic'
+        }, {
+          isShow: true,
+          label: 'Ellipsis',
+          value: 'Ellipsis Project',
+          icon: 'fas fa-ellipsis-h',
+          style: 'btn-basic'
+        }
+      ]
+    },
+    style: ''
   };
 
   constructor(private projectService: ProjectService,
