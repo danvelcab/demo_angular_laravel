@@ -23,8 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { ProjectFormModalComponent } from '../components/modals/project-form-modal/project-form-modal.component';
 import { ProjectFormComponent } from '../components/forms/project-form/project-form.component';
 import { ActionConfirmationModalComponent } from '../components/modals/action-confirmation-modal/action-confirmation-modal.component';
-import { NavbarComponent } from '../components/navbar/navbar.component';
-import { SidebarComponent } from '../components/sidebar/sidebar.component';
+// import { NavbarComponent } from '../components/navbar/navbar.component';
+// import { SidebarComponent } from '../../projects/bloonde-ngx-template/src/sidebar/sidebar.component';
 import { NgTemplateModule } from '../../projects/bloonde-ngx-template/src/lib/ng-template.module';
 import { SearchComponent } from '../../projects/bloonde-ngx-template/src/tables/components/search/search.component';
 
@@ -39,8 +39,8 @@ import { SearchComponent } from '../../projects/bloonde-ngx-template/src/tables/
     ProjectFormModalComponent,
     ProjectFormComponent,
     ActionConfirmationModalComponent,
-    NavbarComponent,
-    SidebarComponent
+    // NavbarComponent,
+    // SidebarComponent
   ],
   imports: [
     NgTemplateModule,

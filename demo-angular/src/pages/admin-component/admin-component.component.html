@@ -1,6 +1,20 @@
-<app-navbar></app-navbar>
+<div class="container__admin">
+  <app-sidebar
+    class="container__sidebar"
+    [configSidebar]="configSidebar"></app-sidebar>
 
-<div class="container__main">
-  <app-sidebar></app-sidebar>
+  <div 
+    id="container__app"
+    class="container__app">
+      <app-navbar
+        class="container__navbar"
+        [configNavbar]="configNavbar"></app-navbar>
+      
+      <div
+        id="main"
+        class="container__main">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
 </div>
 

@@ -1,0 +1,49 @@
+:root {
+  /* COLOR */
+  /* General */
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-muted: #6c757d;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Sidebar */
+  --sb-bg-container: #2b303b;
+  --sb-bg-header: #272b35;
+  --sb-bsb-header: #232730;
+  --sb-cl-link: #85858e;
+  --sb-bg-ulSubMenu: #27272a;
+
+  /* Navbar */
+  --nv-bdb-container: #e1e1e1b3;
+  --nv-bdlr-icons: #e1e1e1;
+
+
+  /* MEDIDAS */
+  /* Sidebar */
+  --nv-width-container: 250px;
+  --nv-height-header: 60px;
+  --nv-padding-li: 0.5rem 0;
+
+  /* Navbar */
+  --nv-height-container: 4.1rem;
+  --nv-margintb-containers: 0.7rem;
+  --nv-height-logo: 1.4rem;
+
+
+  /* FONT SIZE */
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-12r: 20px;
+
+  /* FONT FAMILY */
+  --font-family-arial-sans: Arial, sans-serif;
+}

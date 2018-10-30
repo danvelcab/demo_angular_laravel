@@ -1,48 +1,28 @@
-/* ---------------------------------------------------
-    Colors
------------------------------------------------------ */
-
-/* SIDERBAR */
-.container__sidebar {
-  background-color: #000 !important;
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-.sidebar__title {
-  background-color: #000 !important;
+.btn {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #575757 !important;
+  background-color: #fff;
+  line-height: 21px;
+  padding: 6px 17px;
+  margin-right: 10px;
+}
+.btn:last-child {
+  margin-right: 0;
 }
 
-.sidebar__list {
-  background-color: #0E0E0E !important;
+.btn__icon {
+  margin-right: 10px;
+  color: #575757;
 }
-
-.sidebar__element {
-  background-color: #272727 !important;
-}
-
-.sidebar__element:hover {
-  background-color: #171717 !important;
-}
-
-.element__children {
-  background-color: #373737 !important;
-}
-
-.element__children:hover {
-  background-color: #fff !important;
-  color: #373737 !important;
-}
-
-a.download {
-  background: #fff !important;
-  color: #0E0E0E !important;
-}
-
-a.article {
-  background: #0E0E0E !important;
-  color: #fff !important;
-}
-
-/* HEADER */
-
-
-/* INPUT SEARCH */

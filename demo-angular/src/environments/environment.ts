@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   angularHost: null,
   laravelHost: null,
+  projectName: 'billow-sat',
 };
 
 /*

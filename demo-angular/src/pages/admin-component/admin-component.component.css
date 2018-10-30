@@ -1,11 +1,13 @@
-.container__header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  background-color: #b0c68e;
+.container__admin {
+  height: 100%;
+  background-color: var(--color-info);
 }
 
-.header__logo {
-  width: 12rem;
+.container__app {
+  height: 100%;
+  padding-left: 63px;
+}
+
+.container__main {
+  padding: 1rem;
 }

@@ -13,6 +13,8 @@ import { InputFormDirective } from '../../../../projects/bloonde-ngx-template/sr
 import { LabelFormDirective } from '../../../../projects/bloonde-ngx-template/src/forms/directives/label-form.directive';
 import { CodesHelper } from '../../../../projects/bloonde-ngx-template/src/responses/codes.helper';
 
+import { SessionService } from '../../../../projects/bloonde-ngx-template/src/session/services/session.service';
+
 @Component({
   selector: 'app-project-form',
   templateUrl: './project-form.component.html',
@@ -121,7 +123,7 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     this.inputFormComponents.push(componentRef);
   }
 
-  private resetErrors(): void {
+  public resetErrors(): void {
     this.errors = this.validationService.buildErrorsArray(this.structure);
     this.serverErrors = {};
   }
@@ -129,12 +131,32 @@ export class ProjectFormComponent extends AbstractFormComponent implements OnIni
     this.errors = this.validationService.buildErrorsArray(this.structure);
     this.serverErrors = this.validationService.buildServerErrorsArray(this.structure);
     this.modelEventEmitterArray = this.buildModelEmitters(this.project);
-    this.setModel(this.project, this.structure);
+    this.setModel(this.project);
     this.errorEventEmitterArray = this.buildErrorEmitters(this.errors);
     this.serverErrorEventEmitterArray = this.buildErrorEmitters(this.serverErrors);
     const component = this;
     setTimeout(function() {
       component.constructForm();
     }, 200);
+  }
+
+  public getMessageService(): MessageService {
+    return this.messageService;
+  }
+
+  public getModelService(): any {
+    // return this.sessionService;
+  }
+
+  public getResponseHelper(): ResponseHelper {
+    return this.responseHelper;
+  }
+
+  public getValidationService(): ValidationService {
+    return this.validationService;
+  }
+
+  setModel(model: any): any {
+    // this.loginSession = model;
   }
 }
